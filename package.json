@@ -2,7 +2,7 @@
     "name": "@mkkellogg/gaussian-splats-3d",
     "repository": {
         "type": "git",
-        "url": "https://github.com/mkkellogg/GaussianSplats3D"
+        "url": "https://bell-one.github.io/GaussianSplats3D/"
     },
     "version": "0.4.3",
     "description": "Three.js-based 3D Gaussian splat viewer",
@@ -23,7 +23,9 @@
         "fix-styling": "npx stylelint **/*.scss --fix",
         "fix-js": "npx eslint src --fix",
         "lint": "npx eslint 'src/**/*.js' || true",
-        "prettify": "npx prettier --write 'src/**/*.js'"
+        "prettify": "npx prettier --write 'src/**/*.js'",
+        "predeploy": "npm run build",
+        "deploy": "gh-pages -d build"
     },
     "watch": {
         "build-library": {
@@ -64,7 +66,8 @@
         "prettier": "3.0.2",
         "prettier-eslint": "15.0.1",
         "rollup": "3.28.1",
-        "url-loader": "4.1.1"
+        "url-loader": "4.1.1",
+        "gh-pages":"4.0.0"
     },
     "peerDependencies": {
         "three": ">=0.160.0"
